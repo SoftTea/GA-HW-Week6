@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({
   extended:false
 }));
 
-const userController = require('./controller/users');
+const userController = require('./controller/users.js');
 
-app.use('users', userController);
+app.use('/users', userController);
 
 app.listen(3000, ()=>{
   console.log('Connected to port 3000')
