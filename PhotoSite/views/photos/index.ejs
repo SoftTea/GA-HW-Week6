@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Photo Drop</h1>
+  <h2>A place for photographers and enthusiasts to share and colab </h2>
+
+  <form action="/photos/create" method="get">
+    <button type="submit">New Post</button>
+  </form>
+
+  <form action="/users" method="get">
+    <button type="submit">All Contributors</button>
+  </form>
+
+  <form action="/photos" method="get">
+  <button type="submit">All Submissions</button></form>
+
+  <% for(let i= 0; i<photos.length; i++) { %>
+      <a href="/photos/<%=photos[i].id%>"><img src="<%=photos[i].url%>"> </a>
+    <% } %>
+  
+</body>
+</html>

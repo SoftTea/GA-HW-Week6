@@ -18,6 +18,10 @@ const userController = require('./controller/users.js');
 
 app.use('/users', userController);
 
+const photosController = require('./controller/photos.js');
+
+app.use('/photos', photosController);
+
 app.listen(3000, ()=>{
   console.log('Connected to port 3000')
 })

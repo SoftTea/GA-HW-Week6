@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="/" method="get"><button type="submit">Blog Home</button></form>
+
+  <form action="/photos"><button type="submit">
+    Back to Image Index
+  </button></form>
+
+  <h1>Posted by: <%=user.screenName%></h1>
+  <h4><%=photo.text%></h4>
+  <img src="<%=photo.url%>" alt="<%=photo.text%>">
+
+  <form action="/photos/<%=photo.id%>/edit" method="get">
+    <button type="submit">Edit</button>
+  </form>
+
+  <form action="" method="get">
+    <button type="submit">Delete My Post</button>
+  </form>
+</body>
+</html>
